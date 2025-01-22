@@ -356,6 +356,12 @@
 		});
 	});
 
+	$(document).ready(function () {
+		// Close the menu after a link is clicked
+		$(".navbar-nav .nav-link").on("click", function () {
+			$(".navbar-collapse").collapse('hide');
+		});
+	});
 
 })(jQuery);
 

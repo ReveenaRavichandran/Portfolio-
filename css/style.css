@@ -109,6 +109,41 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     color: #ffbd39;
 }
 
+/* Ensures text doesn't overflow and wraps properly */
+.about-info li span {
+    word-wrap: break-word; /* Forces long words to break */
+    overflow-wrap: break-word; /* Prevents overflow */
+    word-break: break-word; /* Ensures breaking for very long words */
+}
+
+/* Specifically for the email text */
+.email-text {
+    white-space: normal; /* Allows text to wrap */
+    word-wrap: break-word; /* Forces the wrapping of the email */
+    overflow-wrap: break-word; /* Prevents overflow on smaller screens */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .about-info li {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Stack items vertically on small screens */
+    .row.d-flex {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
 /*.row {
     display: flex;
     flex-wrap: wrap;
@@ -6857,7 +6892,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important; }
+  /*padding-top: 3rem !important;*/ }
 
 .pr-5,
 .px-5 {
